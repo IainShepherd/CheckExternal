@@ -1,6 +1,6 @@
 Private Sub Application_ItemSend(ByVal Item As Object, Cancel As Boolean)
 'Developer: Iain Shepherd
-'Version: 1.0
+'Version: 1.0.1
 'Last Updated: 10/06/2019
 
 'Set your interal email address domain here:
@@ -15,7 +15,7 @@ Dim xRecipientAddress As String
 Dim ExternalDomain As Boolean
 ExternalDomain = False
 Const PR_SMTP_ADDRESS As String = "http://schemas.microsoft.com/mapi/proptag/0x39FE001E"
-'If Item.Class <> olMail Then Exit Sub
+If Item.Class <> olMail Then Exit Sub
 
 Set xMailItem = Item
 'Set xRecipitents = xMailItem.Recipients
